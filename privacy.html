@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Ready Set Split</title>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;900&family=Lora:ital,wght@0,400;0,600;1,400&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --sky:        #5BC4E0;
+      --sky-light:  #A8DFF0;
+      --sky-pale:   #E8F6FB;
+      --green:      #3DBF7A;
+      --green-deep: #28A862;
+      --slate:      #0F1E27;
+      --ink:        #1A2E3A;
+      --ink-mid:    #3D5A68;
+      --ink-light:  #6A8E9E;
+      --rule:       #D4EDF5;
+      --bg:         #F7FCFE;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Barlow', sans-serif;
+      font-size: 16px;
+      line-height: 1.75;
+      color: var(--ink);
+      background: var(--bg);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Header ─────────────────────────────────────────── */
+    header {
+      background: var(--slate);
+      padding: 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 20% 50%, rgba(91,196,224,0.12) 0%, transparent 70%),
+        radial-gradient(ellipse 50% 80% at 85% 30%, rgba(61,191,122,0.08) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .header-inner {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 56px 32px 48px;
+      position: relative;
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      margin-bottom: 32px;
+    }
+
+    .brand-pills {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      width: fit-content;
+    }
+
+    .brand-pill {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: 18px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 6px;
+      line-height: 1;
+      display: flex;
+    }
+    .bp-ready, .bp-set { background: var(--sky); color: var(--slate); justify-content: flex-start; }
+    .bp-split          { background: var(--green); color: var(--slate); justify-content: flex-end; }
+
+    .header-eyebrow {
+      font-family: 'Barlow', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--sky-light);
+      margin-bottom: 10px;
+    }
+
+    header h1 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: clamp(36px, 6vw, 54px);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #ffffff;
+      line-height: 1;
+      margin-bottom: 14px;
+    }
+
+    header h1 span {
+      color: var(--sky);
+    }
+
+    .header-meta {
+      font-size: 13px;
+      color: var(--ink-light);
+      letter-spacing: 0.03em;
+    }
+
+    .header-rule {
+      height: 3px;
+      background: linear-gradient(90deg, var(--sky) 0%, var(--green) 60%, transparent 100%);
+      width: 100%;
+    }
+
+    /* ── Main content ────────────────────────────────────── */
+    main {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 56px 32px 80px;
+    }
+
+    .intro-block {
+      background: white;
+      border: 1px solid var(--rule);
+      border-left: 4px solid var(--sky);
+      border-radius: 0 12px 12px 0;
+      padding: 24px 28px;
+      margin-bottom: 52px;
+      font-family: 'Lora', serif;
+      font-size: 15px;
+      line-height: 1.8;
+      color: var(--ink-mid);
+    }
+
+    .intro-block strong {
+      font-weight: 600;
+      color: var(--ink);
+    }
+
+    /* ── Sections ────────────────────────────────────────── */
+    section {
+      margin-bottom: 48px;
+      animation: fadeUp 0.5s ease both;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    section:nth-child(1) { animation-delay: 0.05s; }
+    section:nth-child(2) { animation-delay: 0.10s; }
+    section:nth-child(3) { animation-delay: 0.15s; }
+    section:nth-child(4) { animation-delay: 0.20s; }
+    section:nth-child(5) { animation-delay: 0.25s; }
+    section:nth-child(6) { animation-delay: 0.30s; }
+    section:nth-child(7) { animation-delay: 0.35s; }
+    section:nth-child(8) { animation-delay: 0.40s; }
+
+    .section-number {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--sky);
+      margin-bottom: 4px;
+    }
+
+    section h2 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: 26px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--ink);
+      margin-bottom: 14px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    section p {
+      font-size: 15px;
+      line-height: 1.8;
+      color: var(--ink-mid);
+      margin-bottom: 12px;
+    }
+
+    section p:last-child { margin-bottom: 0; }
+
+    section ul {
+      list-style: none;
+      margin: 10px 0 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    section ul li {
+      font-size: 15px;
+      color: var(--ink-mid);
+      padding-left: 20px;
+      position: relative;
+      line-height: 1.7;
+    }
+
+    section ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 10px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--green);
+    }
+
+    section ul li strong {
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    a {
+      color: var(--sky);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(91,196,224,0.3);
+      transition: color 0.15s, border-color 0.15s;
+    }
+    a:hover {
+      color: var(--green);
+      border-color: rgba(61,191,122,0.4);
+    }
+
+    /* ── Contact block ───────────────────────────────────── */
+    .contact-block {
+      background: var(--slate);
+      border-radius: 14px;
+      padding: 32px 36px;
+      margin-top: 52px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact-block::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 70% 80% at 90% 50%, rgba(61,191,122,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .contact-block h2 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: 22px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--sky-light);
+      margin-bottom: 10px;
+      border: none;
+      padding: 0;
+    }
+
+    .contact-block p {
+      font-size: 14px;
+      color: var(--ink-light);
+      margin-bottom: 16px;
+      line-height: 1.7;
+    }
+
+    .contact-email {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(91,196,224,0.12);
+      border: 1px solid rgba(91,196,224,0.25);
+      border-radius: 8px;
+      padding: 10px 18px;
+      font-family: 'Barlow', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--sky-light);
+      text-decoration: none;
+      border-bottom: none;
+      transition: background 0.15s, border-color 0.15s;
+    }
+
+    .contact-email:hover {
+      background: rgba(91,196,224,0.2);
+      border-color: rgba(91,196,224,0.4);
+      color: var(--sky-light);
+    }
+
+    /* ── Footer ──────────────────────────────────────────── */
+    footer {
+      border-top: 1px solid var(--rule);
+      padding: 28px 32px;
+      text-align: center;
+    }
+
+    footer p {
+      font-size: 12px;
+      color: var(--ink-light);
+      letter-spacing: 0.04em;
+    }
+
+    footer strong {
+      color: var(--ink-mid);
+      font-weight: 600;
+    }
+
+    /* ── Responsive ──────────────────────────────────────── */
+    @media (max-width: 600px) {
+      .header-inner { padding: 40px 20px 36px; }
+      main { padding: 40px 20px 60px; }
+      .contact-block { padding: 24px 20px; }
+      footer { padding: 24px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── Header ─────────────────────────────────────────────── -->
+<header>
+  <div class="header-inner">
+    <div class="brand">
+      <div class="brand-pills">
+        <div class="brand-pill bp-ready">READY</div>
+        <div class="brand-pill bp-set">SET</div>
+        <div class="brand-pill bp-split">SPLIT</div>
+      </div>
+    </div>
+    <div class="header-eyebrow">Legal</div>
+    <h1>Privacy <span>Policy</span></h1>
+    <p class="header-meta">Effective date: January 1, 2026 &nbsp;·&nbsp; Last updated: January 1, 2026</p>
+  </div>
+  <div class="header-rule"></div>
+</header>
+
+<!-- ── Main ───────────────────────────────────────────────── -->
+<main>
+
+  <div class="intro-block">
+    Your privacy matters to us. <strong>Ready Set Split</strong> is built for runners who care about their race — not about being tracked. This policy explains clearly and plainly what information we collect, why we collect it, and how it stays in your control.
+  </div>
+
+  <!-- 1 -->
+  <section>
+    <div class="section-number">01</div>
+    <h2>About This App</h2>
+    <p>Ready Set Split ("the App") is an ultramarathon pace planning tool developed and operated by Ready Set Split ("we," "us," or "our"). The App helps runners plan aid station splits, track pace targets, and prepare for long-distance races.</p>
+    <p>This Privacy Policy applies to all users of the Ready Set Split iOS application and the website at readysetsplit.com.</p>
+  </section>
+
+  <!-- 2 -->
+  <section>
+    <div class="section-number">02</div>
+    <h2>Information We Collect</h2>
+    <p>We collect only what we need to provide the App's features. Here's what that includes:</p>
+    <ul>
+      <li><strong>Information you provide directly:</strong> Race details, distance targets, pace goals, and aid station data that you enter into the App. This data is stored locally on your device.</li>
+      <li><strong>Purchase information:</strong> If you subscribe to Ready Set Split Premium, Apple handles the transaction entirely. We receive only a confirmation that a valid subscription exists — we never see your payment details, card number, or billing address.</li>
+      <li><strong>Basic usage data:</strong> If analytics are enabled, we may collect anonymous information such as which features are used and how often. This data cannot be used to identify you personally.</li>
+    </ul>
+  </section>
+
+  <!-- 3 -->
+  <section>
+    <div class="section-number">03</div>
+    <h2>Information We Do Not Collect</h2>
+    <p>We want to be explicit about what we do not do:</p>
+    <ul>
+      <li>We do not collect your name, email address, or any account credentials.</li>
+      <li>We do not access your location, contacts, photos, or health data.</li>
+      <li>We do not track you across other apps or websites.</li>
+      <li>We do not sell, rent, or share your data with advertisers or third-party data brokers.</li>
+      <li>We do not build advertising profiles based on your usage.</li>
+    </ul>
+  </section>
+
+  <!-- 4 -->
+  <section>
+    <div class="section-number">04</div>
+    <h2>How We Use Your Information</h2>
+    <p>The information we collect is used solely to operate and improve the App:</p>
+    <ul>
+      <li><strong>To provide core features:</strong> Your race plans and pace data are used to power the App's planning and split calculation tools.</li>
+      <li><strong>To manage subscriptions:</strong> Subscription status is checked to determine which features you have access to.</li>
+      <li><strong>To improve the App:</strong> Aggregated, anonymous usage patterns help us understand which features are most useful so we can build a better product.</li>
+    </ul>
+  </section>
+
+  <!-- 5 -->
+  <section>
+    <div class="section-number">05</div>
+    <h2>Data Storage & Security</h2>
+    <p>Your race plans and pace data are stored locally on your device. We do not transmit this data to external servers. If you delete the App, your locally stored data is removed from your device.</p>
+    <p>We use industry-standard security practices to protect any data that does pass through our systems. No method of storage or transmission is 100% secure, but we take the protection of your information seriously.</p>
+  </section>
+
+  <!-- 6 -->
+  <section>
+    <div class="section-number">06</div>
+    <h2>Apple & Third-Party Services</h2>
+    <p>Ready Set Split is distributed through the Apple App Store. Apple may collect certain information in accordance with their own privacy policy as part of operating the App Store and processing in-app purchases. We encourage you to review <a href="https://www.apple.com/privacy/" target="_blank" rel="noopener">Apple's Privacy Policy</a>.</p>
+    <p>We do not integrate third-party advertising SDKs, social login services, or data brokers into the App.</p>
+  </section>
+
+  <!-- 7 -->
+  <section>
+    <div class="section-number">07</div>
+    <h2>Children's Privacy</h2>
+    <p>Ready Set Split is not directed at children under the age of 13. We do not knowingly collect personal information from children. If you believe a child has provided us with personal information, please contact us and we will take steps to delete it promptly.</p>
+  </section>
+
+  <!-- 8 -->
+  <section>
+    <div class="section-number">08</div>
+    <h2>Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. When we do, we will update the "Last updated" date at the top of this page. For significant changes, we will provide notice through the App or on this website. Your continued use of the App after any changes constitutes your acceptance of the updated policy.</p>
+  </section>
+
+  <!-- Contact -->
+  <div class="contact-block">
+    <h2>Questions?</h2>
+    <p>If you have any questions about this Privacy Policy or how your information is handled, we'd love to hear from you.</p>
+    <a href="mailto:hello@readysetsplit.com" class="contact-email">
+      hello@readysetsplit.com
+    </a>
+  </div>
+
+</main>
+
+<!-- ── Footer ─────────────────────────────────────────────── -->
+<footer>
+  <p>© 2026 <strong>Ready Set Split</strong>. All rights reserved. &nbsp;·&nbsp; readysetsplit.com</p>
+</footer>
+
+</body>
+</html>
